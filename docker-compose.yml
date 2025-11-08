@@ -2,7 +2,7 @@ services:
   nginx:
     image: nginx
     restart: always
-    volumes: nginx-bakimda
+    volumes: nginx-bakimda:/app
 
 volumes:
   nginx-bakimda
