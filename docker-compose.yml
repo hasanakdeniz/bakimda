@@ -1,8 +1,8 @@
 services:
-  mariadb:
+  nginx:
     image: nginx
     restart: always
-    volumes: bakimda
+    volumes: nginx-bakimda
 
 volumes:
-  bakimda: {}
+  nginx-bakimda
