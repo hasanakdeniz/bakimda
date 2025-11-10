@@ -1,10 +1,10 @@
 services:
   nginx:
-    image: nginx
+    image: nginx:alpine
     restart: always
-    volumes: nginx-bakimda:/app
     ports:
       - 80
+    volumes: nginx-bakimda:/app
 
 volumes:
-  - nginx-bakimda
+  nginx-bakimda: {}
