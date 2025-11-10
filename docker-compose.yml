@@ -3,6 +3,8 @@ services:
     image: nginx
     restart: always
     volumes: nginx-bakimda:/app
+    ports:
+      - 80
 
 volumes:
-  nginx-bakimda
+  - nginx-bakimda
