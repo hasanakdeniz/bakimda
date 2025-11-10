@@ -1,10 +1,12 @@
 services:
-  nginx:
-    image: nginx:alpine
+  bakimda:
+    build:
+      context: .
+      dockerfile: Dockerfile
     restart: always
     ports:
       - 80
-    volumes: nginx-bakimda:/app
+    volumes: bakimda:/app
 
 volumes:
-  nginx-bakimda: {}
+  bakimda: {}
