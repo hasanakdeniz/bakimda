@@ -7,7 +7,7 @@ services:
     ports:
       - 80
     volumes: 
-      - bakimda:/app
+      - bakimda:/usr/share/nginx/html
     labels:      
       - traefik.http.routers.bakimda-project.rule=${DOMAIN}
       - traefik.http.routers.bakimda-projectS.entrypoints=websecure
