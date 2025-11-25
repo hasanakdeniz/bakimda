@@ -8,6 +8,14 @@ services:
       - 80
     volumes: 
       - bakimda:/app
+    labels:      
+      - traefik.http.routers.bakimda-project.rule=${DOMAIN}
+      - traefik.http.routers.bakimda-projectS.entrypoints=websecure
+      - traefik.http.routers.bakimda-projectS.rule=${DOMAINS}
+      - traefik.http.routers.bakimda-projectS.tls=true
+      - traefik.http.routers.bakimda-projectS.tls.certresolver=le
+      - traefik.http.middlewares.https-redirect-bakimda-projectS.redirectscheme.scheme=https
+      - traefik.http.middlewares.https-redirect-bakimda-projectS.redirectscheme.permanent=true
 
 volumes:
   bakimda: {}
